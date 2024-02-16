@@ -17,13 +17,13 @@ brew install dockutil
 brew install --cask slack google-chrome 1password google-drive zoom chrome-remote-desktop-host
 
 # Download and install Talkdesk
-curl -o ~/Downloads/talkdesk-1.12.0.dmg "https://td-infra-prd-us-east-1-s3-atlaselectron.s3.amazonaws.com/talkdesk-1.12.0.dmg"
+# curl -o ~/Downloads/talkdesk-1.12.0.dmg "https://td-infra-prd-us-east-1-s3-atlaselectron.s3.amazonaws.com/talkdesk-1.12.0.dmg"
 # Mount the DMG file and store the mount point path
-MOUNT_POINT=$(hdiutil attach ~/Downloads/talkdesk-1.12.0.dmg | grep -o '/Volumes/[^ ]*')
+# MOUNT_POINT=$(hdiutil attach ~/Downloads/talkdesk-1.12.0.dmg | grep -o '/Volumes/[^ ]*')
 # Assuming Talkdesk.app is directly in the root of the mounted volume, adjust if it's in a subfolder
-sudo cp -R "$MOUNT_POINT/Talkdesk.app" /Applications/
+# sudo cp -R "$MOUNT_POINT/Talkdesk.app" /Applications/
 # Eject the mounted DMG
-hdiutil detach "$MOUNT_POINT"
+# hdiutil detach "$MOUNT_POINT"
 
 
 # Clear the dock and add specified items
@@ -31,7 +31,7 @@ dockutil --remove all --no-restart
 dockutil --add '/Applications/Launchpad.app' --no-restart
 dockutil --add '/Applications/Google Chrome.app' --no-restart
 dockutil --add '/Applications/Slack.app' --no-restart
-dockutil --add '/Applications/Talkdesk.app' --no-restart
+# dockutil --add '/Applications/Talkdesk.app' --no-restart
 dockutil --add '/System/Applications/Notes.app' --no-restart
 dockutil --add '/System/Applications/Reminders.app' --no-restart
 dockutil --add '/System/Applications/System Settings.app' --no-restart
