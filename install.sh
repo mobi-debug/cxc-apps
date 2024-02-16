@@ -35,7 +35,7 @@ dockutil --add '/Applications/Slack.app' --no-restart
 dockutil --add '/System/Applications/Notes.app' --no-restart
 dockutil --add '/System/Applications/Reminders.app' --no-restart
 dockutil --add '/System/Applications/System Settings.app' --no-restart
-dockutil --add '~/Downloads' --view grid --display folder --sort dateadded
+dockutil --add '~/Downloads' --view fan --display folder --sort dateadded
 
 # Clean up
 rm ~/Downloads/talkdesk-1.12.0.dmg
