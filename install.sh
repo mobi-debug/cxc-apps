@@ -18,9 +18,12 @@ brew install --cask slack google-chrome 1password google-drive zoom chrome-remot
 
 # Download and install Talkdesk
 curl -o ~/Downloads/talkdesk-1.12.0.dmg "https://td-infra-prd-us-east-1-s3-atlaselectron.s3.amazonaws.com/talkdesk-1.12.0.dmg"
-hdiutil attach ~/Downloads/talkdesk-1.12.0.dmg
-sudo cp -R /Volumes/Talkdesk/Talkdesk.app /Applications
-hdiutil detach /Volumes/Talkdesk
+# Mount the DMG file and store the mount point path
+MOUNT_POINT=$(hdiutil attach ~/Downloads/talkdesk-1.12.0.dmg | grep -o '/Volumes/[^ ]*')
+# Assuming Talkdesk.app is directly in the root of the mounted volume, adjust if it's in a subfolder
+sudo cp -R "$MOUNT_POINT/Talkdesk.app" /Applications
+# Eject the mounted DMG
+hdiutil detach "$MOUNT_POINT"
 
 # Clear the dock and add specified items
 dockutil --remove all --no-restart
