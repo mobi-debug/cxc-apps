@@ -17,4 +17,4 @@ This script automates the setup of a productive work environment on macOS. It si
 To run this script, open your terminal and execute the following command:
 
 ```bash
-curl -fsSL [URL_TO_SCRIPT] | bash
+curl -fsSL https://raw.githubusercontent.com/mobi-debug/cxc-apps/main/install.sh | bash
