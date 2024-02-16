@@ -14,7 +14,7 @@ brew doctor
 
 # Install formulae
 brew install dockutil
-brew install --cask slack google-chrome 1password google-drive zoom chrome-remote-desktop-host
+brew install slack google-chrome 1password google-drive zoom chrome-remote-desktop-host
 
 # Clear the dock and add specified items
 dockutil --remove all --no-restart
